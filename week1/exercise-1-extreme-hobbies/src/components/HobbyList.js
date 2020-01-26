@@ -9,8 +9,8 @@ const HobbieList = () => {
   ];
   return (
     <div>
-      {hobbies.map(hobbie => (
-        <Hobbies hobbie={hobbie} />
+      {hobbies.map((hobby, index) => (
+        <Hobbies hobby={hobby} key={index} />
       ))}
     </div>
   );

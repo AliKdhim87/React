@@ -3,7 +3,7 @@ import Button from "./layout/Button";
 import Count from "./Count";
 const Counter = () => {
   const [count, setCount] = useState(0);
-  const increment = () => {
+  const handleOnclick = () => {
     setCount(count + 1);
   };
   const feedback = () => {
@@ -17,7 +17,7 @@ const Counter = () => {
     <div>
       <h3>{feedback()}</h3>
       <Count count={count} />
-      <Button increment={increment} />
+      <Button handleOnclick={handleOnclick} />
     </div>
   );
 };

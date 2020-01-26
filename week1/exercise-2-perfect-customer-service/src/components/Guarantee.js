@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import "../App.css";
-function Guarantee(props) {
+function Guarantee() {
   const data = [
     {
       imag:
@@ -27,8 +27,8 @@ function Guarantee(props) {
   ];
   return (
     <div className='row'>
-      {data.map(item => (
-        <div className='col-lg-4 col-md-6 col-sm-6 p-2 text-center'>
+      {data.map((item, index) => (
+        <div className='col-lg-4 col-md-6 col-sm-6 p-2 text-center' key={index}>
           <img className='img-fluid' src={item.imag} alt={item.title} />
           <h4 className='h4 my-3'>{item.title}</h4>
           <p className='lead'>{item.description}</p>
@@ -37,9 +37,5 @@ function Guarantee(props) {
     </div>
   );
 }
-
-Guarantee.propTypes = {
-  data: PropTypes.object.isRequired
-};
 
 export default Guarantee;
